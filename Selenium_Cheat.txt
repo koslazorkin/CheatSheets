@@ -1,0 +1,21 @@
+----------------------------------------------
+### WebDriver: check if an element exists?
+----------------------------------------------
+# BAD VARIANT 
+
+    boolean present;
+    try {
+       driver.findElement(By.id("logoutLink"));
+       present = true;
+    } catch (NoSuchElementException e) {
+       present = false;
+    }
+
+# GOOD VARIANT
+
+    driver.findElements( By.id("...") ).size() != 0
+    
+    
+----------------------------------------------
+### 
+----------------------------------------------
